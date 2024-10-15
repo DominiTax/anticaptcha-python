@@ -1,9 +1,12 @@
 import requests
 from requests.adapters import HTTPAdapter
 import json
+import warnings
 import urllib3
 from datetime import datetime
 import time
+
+warnings.simplefilter('ignore', urllib3.exceptions.InsecureRequestWarning)
 
 default_headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 
@@ -125,7 +128,7 @@ class antiNetworking:
         self.log("making request to "+method)
 
         try:
-            response = session.post("https://api.anti-captcha.com/"+method, data=json.dumps(data))
+            response = session.post("https://api.anti-captcha.com/"+method, data=json.dumps(data), verify=False)
         except requests.exceptions.HTTPError as err:
             self.log("HTTPError", err.errno, err.strerror, err.args, err.filename)
             self.err_string = "http_error"
