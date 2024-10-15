@@ -6,7 +6,7 @@ Anti-Captcha is the most popular and reliable captcha solving service, working s
 Prices for solving captchas start from $0.0005 per item.
 
 ```bash
-pip3 install anticaptchaofficial
+pip install git+
 ```
 
 &nbsp;
