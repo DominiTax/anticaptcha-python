@@ -5,8 +5,9 @@ Official https://anti-captcha.com/ library for solving images with text, Recaptc
 Anti-Captcha is the most popular and reliable captcha solving service, working since 2007.
 Prices for solving captchas start from $0.0005 per item.
 
+Command to install the lib
 ```bash
-pip install git+
+pip install git+https://github.com/DominiTax/anticaptcha-python.git
 ```
 
 &nbsp;
